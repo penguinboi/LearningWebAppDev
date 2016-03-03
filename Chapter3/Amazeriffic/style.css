@@ -11,8 +11,21 @@ header .container, main .container, footer .container {
   margin: auto;
 }
 
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 14px;
+	font-style: italic;
+}
+
 header {
-  background: white;
+  background: #f9e933;
   overflow: auto;
 }
 
