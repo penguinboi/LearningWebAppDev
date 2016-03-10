@@ -5,10 +5,7 @@ var exercise1 = function(nums) {
     });
     return sum / (nums.length);
 }
-document.write("exercise1");
-document.write("<br>");
-document.write(exercise1([1, 2, 3, 4, 5, 6]));
-document.write("<br>");
+$("#exercise1").append(exercise1([1, 2, 3, 4, 5, 6]));
 
 var exercise2 = function(nums) {
     var largest = nums[0];
@@ -19,10 +16,8 @@ var exercise2 = function(nums) {
     });
     return largest;
 }
-document.write("exercise2");
-document.write("<br>");
-document.write(exercise2([1, 2, 3, 4, 5, 6]));
-document.write("<br>");
+$("#exercise2").append(exercise2([1, 2, 3, 4, 5, 6]));
+
 
 var exercise3 = function(nums) {
     var evenExists = false;
@@ -33,13 +28,7 @@ var exercise3 = function(nums) {
     });
     return evenExists;
 }
-document.write("exercise3");
-document.write("<br>");
-document.write(exercise3([1, 3, 5, 7, 9, 11]));
-document.write("<br>");
-
-document.write(exercise3([1, 2, 3, 4, 5, 6]));
-document.write("<br>");
+$("#exercise3").append(exercise3([1, 3, 5, 7, 9, 11]).toString());
 
 var exercise4 = function(nums) {
     var noOdds = true;
@@ -50,13 +39,8 @@ var exercise4 = function(nums) {
     });
     return noOdds;
 }
-document.write("exercise4");
-document.write("<br>");
-document.write(exercise4([2, 4, 6, 8, 10, 12]));
-document.write("<br>");
+$("#exercise4").append(exercise4([2, 4, 6, 8, 10, 12]).toString());
 
-document.write(exercise4([1, 2, 3, 4, 5, 6]));
-document.write("<br>");
 
 var arrayContains = function(strArr, target) {
     var found = false;
@@ -67,16 +51,7 @@ var arrayContains = function(strArr, target) {
     });
     return found;
 }
-document.write("arrayContains");
-document.write("<br>");
-document.write(arrayContains(["hello", "world"], "hello"));
-document.write("<br>");
-// = > true 
-document.write(arrayContains(["hello", "world"], "goodbye"));
-document.write("<br>");
-// = > false 
-document.write(arrayContains(["hello", "world", "goodbye"], "goodbye"));
-document.write("<br>");
+$("#exercise5").append(arrayContains(["hello", "world"], "hello").toString());
 
 var arrayContainsTwo = function(strArr, target) {
     var found = 0;
@@ -91,18 +66,7 @@ var arrayContainsTwo = function(strArr, target) {
         return false;
     }
 }
-
-document.write("arrayContainsTwo");
-document.write("<br>");
-document.write(arrayContainsTwo(["a", "b", "a", "c"], "a"));
-document.write("<br>");
-// = > true \
-document.write(arrayContainsTwo(["a", "b", "a", "c"], "b"));
-document.write("<br>");
-// = > false 
-document.write(arrayContainsTwo(["a", "b", "a", "c", "a"], "a"));
-document.write("<br>");
-// = > true
+$("#exercise6A").append(arrayContainsTwo(["a", "b", "a", "c"], "a").toString());
 
 var arrayContainsThree = function(strArr, target) {
     var found = 0;
@@ -117,18 +81,7 @@ var arrayContainsThree = function(strArr, target) {
         return false;
     }
 }
-
-document.write("arrayContainsThree");
-document.write("<br>");
-document.write(arrayContainsThree(["a", "b", "a", "c"], "a"));
-document.write("<br>");
-// = > true \
-document.write(arrayContainsThree(["a", "b", "a", "c"], "b"));
-document.write("<br>");
-// = > false 
-document.write(arrayContainsThree(["a", "b", "a", "c", "a"], "a"));
-document.write("<br>");
-// = > true
+$("#exercise6B").append(arrayContainsThree(["a", "b", "a", "c"], "a").toString());
 
 var arrayContainsNTimes = function(strArr, target, num) {
     var found = 0;
@@ -143,44 +96,8 @@ var arrayContainsNTimes = function(strArr, target, num) {
         return false;
     }
 }
+$("#exercise6C").append(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 3).toString());
 
-document.write("arrayContainsNTimes");
-document.write("<br>");
-
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 3));
-document.write("<br>");
-// = > true 
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 2));
-document.write("<br>");
-// = > true 
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 4));
-document.write("<br>");
-// = > false 
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "b", 2));
-document.write("<br>");
-// = > false 
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "b", 1));
-document.write("<br>");
-// = > true 
-document.write(arrayContainsNTimes(["a", "b", "a", "c", "a"], "d", 0));
-document.write("<br>");
-// = > true
-
-document.write("exercise2 using Underscore.js");
-document.write("<br>");
-document.write(_.max([1, 2, 3, 4, 5, 6]));
-document.write("<br>");
-
-document.write("exercise3 using Underscore.js");
-document.write("<br>");
-document.write(_.some([1, 3, 5, 7, 9, 11],function(num){ return num % 2 == 0; }));
-document.write("<br>");
-document.write(_.some([1, 2, 3, 4, 5, 6],function(num){ return num % 2 == 0; }));
-document.write("<br>");
-
-document.write("exercise4 using Underscore.js");
-document.write("<br>");
-document.write(_.every([2, 4, 6, 8, 10, 12],function(num){ return num % 2 == 0; }));
-document.write("<br>");
-document.write(_.every([1, 2, 3, 4, 5, 6],function(num){ return num % 2 == 0; }));
-document.write("<br>");
+$("#exercise2U").append(_.max([1, 2, 3, 4, 5, 6]));
+$("#exercise3U").append(_.some([1, 3, 5, 7, 9, 11],function(num){ return num % 2 == 0; }));
+$("#exercise4U").append(_.every([2, 4, 6, 8, 10, 12],function(num){ return num % 2 == 0; }));
