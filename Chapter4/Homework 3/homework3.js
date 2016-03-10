@@ -99,5 +99,5 @@ var arrayContainsNTimes = function(strArr, target, num) {
 $("#exercise6C").append(arrayContainsNTimes(["a", "b", "a", "c", "a"], "a", 3).toString());
 
 $("#exercise2U").append(_.max([1, 2, 3, 4, 5, 6]));
-$("#exercise3U").append(_.some([1, 3, 5, 7, 9, 11],function(num){ return num % 2 == 0; }));
-$("#exercise4U").append(_.every([2, 4, 6, 8, 10, 12],function(num){ return num % 2 == 0; }));
+$("#exercise3U").append(_.some([1, 3, 5, 7, 9, 11],function(num){ return num % 2 == 0; }).toString());
+$("#exercise4U").append(_.every([2, 4, 6, 8, 10, 12],function(num){ return num % 2 == 0; }).toString());
